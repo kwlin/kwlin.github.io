@@ -143,6 +143,7 @@ exclude:
   - CHANGELOG
   - config
   - Gemfile
+  - Gemfile.lock
   - Gruntfile.js
   - gulpfile.js
   - LICENSE
@@ -151,6 +152,7 @@ exclude:
   - package.json
   - Rakefile
   - README
+  - README.md
   - tmp
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
@@ -209,9 +211,9 @@ whitelist:
   - jekyll-feed
   - jemoji
 
-exclude:
-  - Gemfile
-  - Gemfile.lock
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
 
 # Archives
 #  Type
