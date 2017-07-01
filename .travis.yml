@@ -22,5 +22,3 @@ env:
 branches:
   only:
     - source
-
-sudo: false
