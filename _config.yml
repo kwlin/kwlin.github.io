@@ -27,8 +27,8 @@
 # Site Settings
 locale                   : "en"
 title                    : "Ka-Wai Lin"
-title_separator          : #"-"
-name                     : #"Ka-Wai Lin"
+title_separator          : "-"
+name                     : "Ka-Wai Lin"
 description              : # "Personal blog as a software engineer."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -96,8 +96,8 @@ analytics:
 # Site Author
 author:
   name             : "Ka-Wai Lin"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "christian, husband, father, software engineer @ Info Support, squash player, wannabe pilot"
+  avatar           : https://s.gravatar.com/avatar/4ed947852759c9151344d5c6d29aa502 # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "christian, husband, father, software engineer/consultant/developer @ Info Support, squash player, #avgeek"
   location         : "The Netherlands"
   email            :
   uri              : 
@@ -185,16 +185,17 @@ sass:
   style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
 # Outputting
-permalink: /:categories/:title/
+permalink: /:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Build settings
 theme: minimal-mistakes-jekyll
+minimal_mistakes_skin:  default #"default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 
 # Plugins
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-gist
   - jekyll-feed
@@ -262,9 +263,17 @@ defaults:
       author_profile: true
       read_time: true
       comments: # true
-      share: true
+      share: false
       related: true
-
+      header:
+        overlay_image: /assets/images/header.jpg
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
 # Settings for builing master branch with travis-ci
 # with jekyll-travis
 
