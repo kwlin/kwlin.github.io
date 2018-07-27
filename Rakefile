@@ -45,7 +45,7 @@ namespace :site do
     Dir.chdir(DESTINATION) { sh "git checkout #{DESTINATION_BRANCH}" }
 
     # Generate & test the site
-    sh "bundle exec jekyll build &&  htmlproofer --url-ignore https://www.linkedin.com/in/kawail #{DESTINATION}"
+    sh "bundle exec jekyll build &&  htmlproofer #{DESTINATION} --disable-external"
     
     # Commit and push to github
     sha = `git log`.match(/[a-z0-9]{40}/)[0]
